@@ -37,7 +37,6 @@
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
     transform: translateY(0px); }
   100% {
     opacity: 0;
@@ -175,9 +174,10 @@
 
 .dropzone {
   min-height: 150px;
+  min-width: 100px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   background: white;
-  padding: 20px 20px; }
+  padding: 10px 10px; }
   .dropzone.dz-clickable {
     cursor: pointer; }
     .dropzone.dz-clickable * {
@@ -241,8 +241,8 @@
       color: rgba(0, 0, 0, 0.9);
       line-height: 150%; }
       .dropzone .dz-preview .dz-details .dz-size {
-        margin-bottom: 1em;
-        font-size: 16px; }
+        margin: -0.5em;
+        font-size: 13px; }
       .dropzone .dz-preview .dz-details .dz-filename {
         white-space: nowrap; }
         .dropzone .dz-preview .dz-details .dz-filename:hover span {
@@ -298,10 +298,13 @@
       left: 50%;
       margin-left: -27px;
       margin-top: -27px; }
-      .dropzone .dz-preview .dz-success-mark svg, .dropzone .dz-preview .dz-error-mark svg {
+      .dropzone .dz-preview .dz-success-mark svg {
         display: block;
         width: 54px;
         height: 54px; }
+.dropzone .dz-preview .dz-error-mark svg{
+  display : none;
+}
     .dropzone .dz-preview.dz-processing .dz-progress {
       opacity: 1;
       -webkit-transition: all 0.2s linear;
@@ -331,6 +334,7 @@
       left: 50%;
       top: 50%;
       margin-top: -8px;
+      margin: -6.8em;
       width: 80px;
       margin-left: -40px;
       background: rgba(255, 255, 255, 0.9);
@@ -414,6 +418,7 @@
   -webkit-filter: none;
 }
 .vue-dropzone .dz-preview .dz-details {
+
   bottom: 0;
   top: 0;
   color: white;
@@ -426,6 +431,7 @@
 }
 .vue-dropzone .dz-preview .dz-details .dz-filename span,
 .vue-dropzone .dz-preview .dz-details .dz-size span {
+
   background-color: transparent;
 }
 .vue-dropzone .dz-preview .dz-details .dz-filename:not(:hover) span {
@@ -439,10 +445,10 @@
   background: #cccccc;
 }
 .vue-dropzone .dz-preview .dz-remove {
-  position: absolute;
+  position: relative;
   z-index: 30;
   color: white;
-  margin-left: 15px;
+  margin: 2em;
   padding: 10px;
   top: inherit;
   bottom: 15px;
@@ -471,11 +477,11 @@
   margin-right: auto;
 }
 .vue-dropzone .dz-preview .dz-error-message {
-  top: calc(15%);
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  width: 100%;
+  margin: -15em;
+  margin-left: -2em;
+
+
+
 }
 .vue-dropzone .dz-preview .dz-error-message:after {
   bottom: -6px;
